@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Тест на коронавирус онлайн</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="Description" content="Форма онлайн тестирования на наличие короновируса в организме">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Тест на коронавирус онлайн</h1>
+      <form class="covid-19-test-form" action="sendMail.php" method="POST">
+        <input type="hidden" class="test-result" name="test-result" value="0">
+        <ul class="questions">
+
+          <li class="question">
+            <h2 class="question__caption visability-hidden">Начало теста</h2>
+            <p class="question__text">
+              Распознать симптомы коронавируса COVID-19 довольно сложно из-за схожести с признаками ОРЗ и гриппа. 
+              Онлайн-тест поможет не впадать в панику по каждому чиху и сориентироваться в дальнейших действиях.
+            </p>
+          </li>
+
+          <li class="question">
+            <h2 class="question__caption">Ваш возраст до 60 лет?</h2>
+            <ul class="answers">
+              <li class="answer">
+                <input class="answer__radio .visually-hidden" type="radio" name="question1-group" id="question1-answer1" value="1" checked>
+                <label class="answer__label" for="question1-answer1">Да</label>
+              </li>
+              <li class="answer">
+                <input class="answer__radio .visually-hidden" type="radio" name="question1-group" id="question1-answer2" value="0">
+                <label class="answer__label" for="question1-answer2">Нет</label>
+              </li>
+            </ul>
+          </li>
+
+          <li class="question">
+            <h2 class="question__caption">Есть ли у вас хронические заболевания?</h2>
+            <ul class="answers">
+              <li class="answer">
+                <input class="answer__radio .visually-hidden" type="radio" name="question2-group" id="question2-answer1" value="1" checked>
+                <label class="answer__label" for="question2-answer1">Да</label>
+              </li>
+              <li class="answer">
+                <input class="answer__radio .visually-hidden" type="radio" name="question2-group" id="question2-answer2" value="0">
+                <label class="answer__label" for="question2-answer2">Нет</label>
+              </li>
+            </ul>
+          </li>
+
+          <li class="question">
+            <h2 class="question__caption">Повышена ли у Вас температура тела?</h2>
+            <ul class="answers">
+              <li class="answer">
+                <input class="answer__radio .visually-hidden" type="radio" name="question3-group" id="question3-answer1" value="1" checked>
+                <label class="answer__label" for="question3-answer1">Да</label>
+              </li>
+              <li class="answer">
+                <input class="answer__radio .visually-hidden" type="radio" name="question3-group" id="question3-answer2" value="0">
+                <label class="answer__label" for="question3-answer2">Нет</label>
+              </li>
+            </ul>
+          </li>
+
+          <li class="question">
+            <h2 class="question__caption">Есть ли у Вас насморк?</h2>
+            <ul class="answers">
+              <li class="answer">
+                <input class="answer__radio .visually-hidden" type="radio" name="question4-group" id="question4-answer1" value="1" checked>
+                <label class="answer__label" for="question4-answer1">Да</label>
+              </li>
+              <li class="answer">
+                <input class="answer__radio .visually-hidden" type="radio" name="question4-group" id="question4-answer2" value="0">
+                <label class="answer__label" for="question4-answer2">Нет</label>
+              </li>
+            </ul>
+          </li>
+
+          <li class="question">
+            <h2 class="question__caption">Есть ли у Вас сухой кашель?</h2>
+            <ul class="answers">
+              <li class="answer">
+                <input class="answer__radio .visually-hidden" type="radio" name="question5-group" id="question5-answer1" value="1" checked>
+                <label class="answer__label" for="question5-answer1">Да</label>
+              </li>
+              <li class="answer">
+                <input class="answer__radio .visually-hidden" type="radio" name="question5-group" id="question5-answer2" value="0">
+                <label class="answer__label" for="question5-answer2">Нет</label>
+              </li>
+            </ul>
+          </li>
+
+          <li class="question">
+            <h2 class="question__caption">Чувствуете ли Вы боль в суставах/ломоту в теле?</h2>
+            <ul class="answers">
+              <li class="answer">
+                <input class="answer__radio .visually-hidden" type="radio" name="question6-group" id="question6-answer1" value="1" checked>
+                <label class="answer__label" for="question6-answer1">Да</label>
+              </li>
+              <li class="answer">
+                <input class="answer__radio .visually-hidden" type="radio" name="question6-group" id="question6-answer2" value="0">
+                <label class="answer__label" for="question6-answer2">Нет</label>
+              </li>
+            </ul>
+          </li>
+
+          <li class="question">
+            <h2 class="question__caption">Испытываете ли Вы головную боль?</h2>
+            <ul class="answers">
+              <li class="answer">
+                <input class="answer__radio .visually-hidden" type="radio" name="question7-group" id="question7-answer1" value="1" checked>
+                <label class="answer__label" for="question7-answer1">Да</label>
+              </li>
+              <li class="answer">
+                <input class="answer__radio .visually-hidden" type="radio" name="question7-group" id="question7-answer2" value="0">
+                <label class="answer__label" for="question7-answer2">Нет</label>
+              </li>
+            </ul>
+          </li>
+
+          <li class="question">
+            <h2 class="question__caption">Наблюдается ли у Вас першение/боль в горле?</h2>
+            <ul class="answers">
+              <li class="answer">
+                <input class="answer__radio .visually-hidden" type="radio" name="question8-group" id="question8-answer1" value="1" checked>
+                <label class="answer__label" for="question8-answer1">Да</label>
+              </li>
+              <li class="answer">
+                <input class="answer__radio .visually-hidden" type="radio" name="question8-group" id="question8-answer2" value="0">
+                <label class="answer__label" for="question8-answer2">Нет</label>
+              </li>
+            </ul>
+          </li>
+
+          <li class="question">
+            <h2 class="question__caption">Ощущаете ли Вы затрудненность дыхания?</h2>
+            <ul class="answers">
+              <li class="answer">
+                <input class="answer__radio .visually-hidden" type="radio" name="question9-group" id="question9-answer1" value="1" checked>
+                <label class="answer__label" for="question9-answer1">Да</label>
+              </li>
+              <li class="answer">
+                <input class="answer__radio .visually-hidden" type="radio" name="question9-group" id="question9-answer2" value="0">
+                <label class="answer__label" for="question9-answer2">Нет</label>
+              </li>
+            </ul>
+            <div class="sending-results">
+              <label class="sending-results__label" for="sending-results__email">Хотите получить результат теста?</label>
+              <input class="sending-results__input" id="sending-results__email" type="email" name="email" placeholder="Введите e-mail">
+            </div>
+          </li>
+
+          <li style="display: none" class="question">
+            <h2 class="question__caption">Результаты тестирования</h2>
+            <p class="question__result"><strong>Результат теста:</strong> есть подозрения на заражение</p>
+            <p class="question__text question__text--recommendations">
+              Рекомендуем следить за своим состоянием в ближайшие часы и при усугублении симптомов позвонить в медучреждение. 
+            </p>
+            <p class="question__text">
+              Берегите себя и своих близких. Будьте здоровы! 
+            </p>
+          </li>
+
+        </ul>
+
+        <div class="navigation-group">
+          <button style="display: none" class="navigation-group__button navigation-group__button--prev" type="button">Назад</button>
+          <button style="display: none" class="navigation-group__button navigation-group__button--next" type="button">Далее</button>
+          <button class="navigation-group__button navigation-group__button--submit" type="submit">Отправить</button>
+        </div>
+      </form>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+
+</html>
