@@ -16,7 +16,7 @@ if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
   $mail->SMTPSecure = 'ssl';
   $mail->Port = 465;
 
-  $mail->setFrom('testuser2075@mail.ru');
+  $mail->setFrom('testuser2075@mail.ru', 'Онлайн-тест на коронавирус онлайн');
   $mail->addAddress($email);
   $mail->isHTML(true);
 
@@ -26,7 +26,8 @@ if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
                       'на странице <a href="https://nosgid.ru/beremennost/koronavirusnaya-bolezn-covid-19-i-beremennost">https://nosgid.ru/beremennost/koronavirusnaya-bolezn-covid-19-i-beremennost</a></br><br>' .
                       'Результат вашего тестирования: <strong>' .$testResult . '%</strong><br><br><br>' .
                       'Если вы набрали по результатам теста 80% и более, рекомендуем следить за своим состоянием в ближайшие часы и при усугублении симптомов позвонить в медучреждение.<br><br>' .
-                      'Берегите себя и своих близких. Будьте здоровы!<br><br><br>' .
+                      'Берегите себя и своих близких. Будьте здоровы!<br><br>' .
+                      'Внимание! Результат теста не является диагнозом. За точными данными обращайтесь к врачу.<br><br><br>' .
                       'Данное письмо сформировано автоматически и отвечать на него не нужно.<br><br><br>' .
                       'С уважением, <a href="https://nosgid.ru/">Доктор НОС</a>';
   $mail->AltBody = '';
